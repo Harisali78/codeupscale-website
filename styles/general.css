@@ -93,7 +93,8 @@
 .myDropdown:hover .dropdownMenu {
   display: block;
 }
-.hero-section {
+/* Hero Section */
+/* .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,9 +209,110 @@
 
 .bg-image {
   background: url("../public/images/video.jpg");
-  background-attachment: fixed; /* or scroll */
+  background-attachment: fixed;
   background-size: cover;
   height: 700px;
+  width: 100%;
+} */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  padding: 40px;
+}
+.hero-section-content-image {
+  display: flex;
+  justify-content: space-around;
+}
+.hero-section-content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero-section-content h1 {
+  font-size: 60px;
+  font-weight: bold;
+  width: 600px;
+}
+.hero-section-content p {
+  width: 500px;
+  font-size: 30px;
+  margin: 10px 0;
+}
+.hero-section-content button {
+  padding: 15px 30px;
+  font-size: 30px;
+  margin: 10px 0;
+}
+.hero-section-content a {
+  font-size: 30px;
+  border-bottom: 2px dotted #fff;
+  text-decoration: none;
+  color: #fff;
+}
+.hero-section-image {
+  width: 700px;
+  height: 750px;
+}
+.hero-section-image img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 120px;
+}
+.hero-section-main-slider {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 250px 0 40px 0;
+}
+.hero-section-my-slider {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.hero-section-my-slider::before,
+.hero-section-my-slider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.hero-section-my-slider::before {
+  left: 0;
+  top: 0;
+}
+.hero-section-my-slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.hero-section-my-slide-track {
+  display: flex;
+  width: calc(250px * 18);
+  /* animation: scroll1 60s linear infinite; */
+  animation: scroll1 20s linear infinite;
+}
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+.hero-section-my-slide-track .hero-section-my-slide {
+  display: flex;
+  align-items: center;
+  perspective: 100px;
+  margin: 0 60px;
+}
+.my-slide img {
+  transition: transform 1s;
   width: 100%;
 }
 /* About Section */
@@ -1127,6 +1229,9 @@ b {
 .contact-page {
   padding-top: 120px;
   padding-bottom: 110px;
+}
+.contact-page .sec-title-wrapper {
+  text-align: left;
 }
 .contact-page .sec-title-wrapper h2 {
   font-size: 100px;

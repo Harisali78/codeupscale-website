@@ -60,7 +60,7 @@ export default function ContactUs() {
                   <div className="row g-3">
                     <div className="col-xxl-6 col-xl-6 col-12">
                       <select name="" id="">
-                        <option value="" selected disabled>
+                        <option value="" defaultValue disabled>
                           Select a service
                         </option>
                         <option value="">UI/UX Design</option>
@@ -70,7 +70,7 @@ export default function ContactUs() {
                     </div>
                     <div className="col-xxl-6 col-xl-6 col-12">
                       <select name="" id="">
-                        <option value="" selected disabled>
+                        <option value="" defaultValue disabled>
                           Choose a budget
                         </option>
                         <option value="">$1-500k</option>

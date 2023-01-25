@@ -1,8 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
+import heroSectionImg from "../../../public/images/hero-section-img.jpeg";
+import heroSectionWork from "../../../public/images/hero-section-work.png";
+import heroSectionWork2 from "../../../public/images/hero-section-work2.png";
+import heroSectionWork3 from "../../../public/images/hero-section-work3.png";
+import heroSectionWork4 from "../../../public/images/hero-section-work4.png";
+import heroSectionWork5 from "../../../public/images/hero-section-work5.png";
+import heroSectionWork6 from "../../../public/images/hero-section-work6.png";
+import heroSectionWork7 from "../../../public/images/hero-section-work7.png";
+import heroSectionWork8 from "../../../public/images/hero-section-work8.png";
 export default function HeroSection() {
   return (
     <>
-      <div className="container hero-section">
+      {/* <div className="container hero-section">
         <div className="hero-section-images">
           <Image src={"/images/sh-1.jpg"} alt="sh 1" width={250} height={250} />
           <Image src={"/images/sh-2.jpg"} alt="sh 2" width={250} height={250} />
@@ -32,8 +42,95 @@ export default function HeroSection() {
           <div className="blue-square"></div>
           <div className="black-square"></div>
         </div>
+      </div> */}
+      <div className="hero-section">
+        <div className="hero-section-content-image">
+          <div className="hero-section-content">
+            <h1>#1 Agency for Partnership Growth.</h1>
+            <p>
+              Born in London, we are a squad of partnership experts, growth
+              leads and creatives who help unlock rapid growth and empower
+              global industry leaders in hospitality tech.
+            </p>
+            <button>Contact Us</button>
+            <Link href="">See Recent Work</Link>
+          </div>
+          <div className="hero-section-image">
+            <Image
+              src={heroSectionImg}
+              alt="Hero Section"
+              className="hero-section-img"
+            />
+          </div>
+        </div>
+        <div className="hero-section-main-slider">
+          <div className="hero-section-my-slider">
+            <div className="hero-section-my-slide-track">
+              <div className="hero-section-my-slide">
+                <Image
+                  src={heroSectionWork5}
+                  alt=""
+                  // height={470}
+                  // width={500}
+                  height={50}
+                  width={150}
+                />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork2} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork3} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork4} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork5} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork6} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork7} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork8} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork3} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork2} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork3} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork4} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork5} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork6} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork7} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork8} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork7} alt="" height={50} width={150} />
+              </div>
+              <div className="hero-section-my-slide">
+                <Image src={heroSectionWork2} alt="" height={50} width={150} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      {/* <div className="bg-image"></div> */}
     </>
   );
 }
