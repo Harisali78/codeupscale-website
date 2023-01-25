@@ -1,0 +1,11 @@
+import "../styles/globals.css";
+import "../styles/general.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import MainLayout from "../src/components/layout/main-layout";
+export default function App({ Component, pageProps }) {
+  return (
+    <MainLayout>
+      <Component {...pageProps} />
+    </MainLayout>
+  );
+}

@@ -1,0 +1,25 @@
+{
+  "name": "codeupscale-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.1",
+    "@types/gsap": "^3.0.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.3",
+    "gsap": "^3.11.4",
+    "jquery": "^3.6.3",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-collapse": "^5.1.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1"
+  }
+}
