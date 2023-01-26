@@ -6,7 +6,7 @@ export default function Header() {
   const [clientWindowHeight, setClientWindowHeight] = useState("");
 
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
-  const [padding, setPadding] = useState(30);
+  const [padding, setPadding] = useState(20);
   const [boxShadow, setBoxShadow] = useState(0);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

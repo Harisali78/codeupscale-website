@@ -1,7 +1,7 @@
 import Head from "next/head";
 import About from "../src/components/about/about";
 import HeroSection from "../src/components/hero-section/hero-section";
-import InfiniteScrollMenu from "../src/components/infinite-scroll-menu/InfiniteScrollMenu";
+// import InfiniteScrollMenu from "../src/components/infinite-scroll-menu/InfiniteScrollMenu";
 import Services from "../src/components/services/services";
 import Testimonials from "../src/components/testimonials/testimonials";
 import WorkedWithBrands from "../src/components/worked-with/worked-with-brands";
@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <div>
         <HeroSection />
-        <InfiniteScrollMenu />
+        {/* <InfiniteScrollMenu /> */}
         <About />
         <Services />
         {/* <OurWork /> */}
