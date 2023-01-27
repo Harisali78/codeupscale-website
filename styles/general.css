@@ -254,8 +254,8 @@
   color: #fff;
 }
 .hero-section-image {
-  width: 700px;
-  height: 750px;
+  width: 600px;
+  height: auto;
 }
 .hero-section-image img {
   width: 100%;
@@ -2422,7 +2422,6 @@ b {
 }
 .row-animated-cards {
   display: flex;
-  width: 1200px;
 }
 .row-animated-cards .animated-card-first {
   width: 50%;
@@ -2474,24 +2473,13 @@ b {
   transition: all 0.5s ease-in-out;
   position: relative;
   padding: 50px 30px;
-  height: 60vh;
+  height: 45vh;
   margin: 10px 10px 10px 0;
 }
 .animated-card .card-images {
   width: 50%;
 }
 .portfolio-card-content {
-  /* width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  text-align: right;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: lighter; */
-
   display: none;
 }
 .portfolio-logo-image {
