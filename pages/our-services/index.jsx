@@ -1,12 +1,9 @@
 import Link from "next/link";
-import Contact from "../../src/components/contact-us/contact";
-import Header from "../../src/components/header/header";
 import { BsArrowUpRight, BsPlus } from "react-icons/bs";
 import Image from "next/image";
 import shape1 from "../../public/images/shape-1.png";
 import shape2 from "../../public/images/shape-2.png";
 import shape3 from "../../public/images/shape-3.png";
-import FooterComponent from "../../src/components/footer/footer";
 export default function ServicesPage() {
   return (
     <>

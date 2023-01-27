@@ -1227,7 +1227,7 @@ b {
 /* Testimonials */
 .testimonials {
   padding-top: 3rem;
-  padding-bottom: 12rem;
+  padding-bottom: 18rem;
 }
 .testimonial-with-text {
   display: flex;
@@ -1929,6 +1929,7 @@ b {
 .services-area-section {
   background-color: #121212;
   padding-top: 130px;
+  margin: 30px 0 100px 0;
 }
 .services-area-section .container {
   padding-bottom: 110px;
@@ -2307,6 +2308,7 @@ b {
   padding-bottom: 140px;
   background-color: #121212;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 .sec-title-wrapper {
   text-align: center;
@@ -2401,6 +2403,7 @@ b {
 .portfolio-structure {
   background-color: #000;
   padding: 30px;
+  margin: 10px 0 100px 0;
 }
 .portfolio-sidebar-cards {
   display: flex;

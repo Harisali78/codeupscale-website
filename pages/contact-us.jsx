@@ -1,6 +1,4 @@
 import React from "react";
-import FooterComponent from "../src/components/footer/footer";
-import Header from "../src/components/header/header";
 
 export default function ContactUs() {
   return (

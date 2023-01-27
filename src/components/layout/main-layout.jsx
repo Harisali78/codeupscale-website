@@ -8,7 +8,7 @@ const MainLayout = ({ children }) => {
       <main>
         <Header />
         {children}
-        <Contact />
+        {/* <Contact /> */}
         <FooterComponent />
       </main>
     </>
