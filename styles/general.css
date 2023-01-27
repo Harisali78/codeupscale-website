@@ -2418,22 +2418,87 @@ b {
 .portfolio-cards {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+.row-animated-cards {
+  display: flex;
+  width: 1200px;
+}
+.row-animated-cards .animated-card-first {
+  width: 50%;
+}
+.row-animated-cards .animated-card-second {
+  width: 50%;
+  margin-left: 1rem;
+}
+.row-animated-cards .animated-card-third {
+  width: 50%;
+}
+.row-animated-cards .animated-card-fourth {
+  margin-left: 1rem;
+  width: 50%;
+}
+.row-animated-cards .animated-card-fifth {
+  width: 50%;
+}
+.row-animated-cards .animated-card-sixth {
+  margin-left: 1rem;
+  width: 50%;
+}
+.row-animated-cards .animated-card-first:hover {
+  width: 100%;
+  background-color: rgb(21, 21, 100);
+}
+.row-animated-cards .animated-card-second:hover {
+  width: 100%;
+  background-color: #d82026;
+}
+.row-animated-cards .animated-card-third:hover {
+  width: 100%;
+  background-color: rgb(78, 12, 139);
+}
+.row-animated-cards .animated-card-fourth:hover {
+  width: 100%;
+  background-color: #000;
+}
+.row-animated-cards .animated-card-fifth:hover {
+  width: 100%;
+  background-color: green;
+}
+.row-animated-cards .animated-card-sixth:hover {
+  width: 100%;
+  background-color: #151564;
 }
 .animated-card {
   background-color: #21232b;
-  width: 100%;
   transition: all 0.5s ease-in-out;
   position: relative;
   padding: 50px 30px;
   height: 60vh;
   margin: 10px 10px 10px 0;
 }
+.animated-card .card-images {
+  width: 50%;
+}
+.portfolio-card-content {
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  text-align: right;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: lighter; */
+
+  display: none;
+}
 .portfolio-logo-image {
   position: relative;
 }
 .portfolio-clouds-image {
-  width: 70%;
+  width: 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -2444,7 +2509,7 @@ b {
   height: 100%;
 }
 .portfolio-plane-image {
-  width: 60%;
+  width: 0;
   position: absolute;
   top: 25%;
   right: 5%;
@@ -2454,51 +2519,67 @@ b {
   width: 100%;
   height: 100%;
 }
-.portfolio-card-content {
-  position: absolute;
-  bottom: 0;
-  text-align: right;
-  color: white;
+
+.animated-card:hover .portfolio-card-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: lighter;
 }
-.ui-ux-cards {
-  display: flex;
-  justify-content: flex-end;
-}
-.ui-ux-cards .ui-card,
-.ui-ux-cards .ux-card {
-  margin: 0 10px;
-  padding: 0.4em 6px;
-}
-.animated-card:hover {
-  background-color: rgb(21, 21, 100);
-}
 .animated-card:hover .portfolio-plane-image {
-  transform: translate(-100px, -25px);
+  width: 50%;
+  /* transform: translate(-100px, -25px); */
 }
 .animated-card:hover .portfolio-clouds-image {
-  width: 80%;
+  width: 50%;
 }
 .explore-project-portfolio {
   display: none;
+}
+.explore-project-portfolio span {
+  display: flex;
+  align-items: center;
+}
+.explore-project-portfolio span hr {
+  color: #fff;
+  width: 60px;
+  opacity: 1.25;
+  transition: all 0.5s ease-in-out;
+  margin-right: 0.5rem;
 }
 .animated-card:hover .explore-project-portfolio {
   cursor: pointer;
   display: block;
   margin-top: 10px;
 }
-.explore-project-portfolio:before {
+.explore-project-portfolio:hover hr {
+  width: 0;
+  margin: 0;
+}
+.ui-ux-cards {
+  display: flex;
+  justify-content: flex-start;
+}
+.ui-ux-cards .ui-card,
+.ui-ux-cards .ux-card {
+  padding: 0.4em 6px;
+}
+
+/* .explore-project-portfolio:before {
   transition: all 0.3s ease-in-out;
   content: "";
   display: block;
-  width: 6vw;
+  width: 2vw;
   height: 2px;
   background-color: currentColor;
   position: absolute;
-  top: 83%;
-  right: 35%;
+  top: 76%;
+  left: 0%;
   margin-top: -1px;
   transform: translateZ(0);
 }
@@ -2509,11 +2590,11 @@ b {
   height: 2px;
   background-color: currentColor;
   position: absolute;
-  top: 83%;
-  right: 35%;
+  top: 76%;
+  left: 0%;
   margin-top: -1px;
   transform: translateZ(0);
-}
+} */
 .portfolio-mainTabs {
   position: relative;
   display: flex;
@@ -2521,49 +2602,17 @@ b {
   padding-bottom: 1rem;
   margin-right: 1rem;
 }
-.second-project-card {
-  margin-left: 1rem;
-}
-.second-project-card:hover {
-  background-color: #d82026;
-}
-.third-project-card:hover {
-  background-color: rgb(78, 12, 139);
-}
-.fourth-project-card {
-  margin-left: 1rem;
-}
-.fourth-project-card:hover {
-  background-color: #000;
-}
 
-.fifth-project-card:hover {
-  background-color: green;
-}
-.sixth-project-card {
-  margin-left: 1rem;
-}
 .portfolio-mainTabs button {
   border: none;
   background: transparent;
   color: #fff;
 }
 .portfolio-mainTabs button .portfolio-mainTabs-title {
-  /* font-weight: 800; */
   font-size: 1.8rem;
   margin-right: 1rem;
 }
-/* .portfolio-mainTabs:before {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 17px;
-  background-color: #fff;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  transition: left 0.2s cubic-bezier(0.33, 1, 0.68, 1);
-} */
+
 .portfolio-tab-cards-tabBox {
   margin-top: 50px;
   cursor: pointer;
@@ -2572,7 +2621,6 @@ b {
   color: rgb(50, 192, 202);
   font-weight: bold;
 }
-/* .portfolio-tab-cards-tabBox h4, */
 .portfolio-tab-cards-tabBox p {
   margin: 10px 0;
   color: #fff;
