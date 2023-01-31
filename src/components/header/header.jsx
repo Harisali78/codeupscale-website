@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../../../public/images/logo.png";
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 export default function Header() {
@@ -38,11 +39,7 @@ export default function Header() {
     >
       <Container fluid>
         <Navbar.Brand>
-          <img
-            src={"/images/logo.png"}
-            alt="Picture of the Logo"
-            className="logo-image"
-          />
+          <Image src={logo} className="logo-image" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

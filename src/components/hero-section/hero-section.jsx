@@ -9,6 +9,7 @@ import heroSectionWork5 from "../../../public/images/hero-section-work5.png";
 import heroSectionWork6 from "../../../public/images/hero-section-work6.png";
 import heroSectionWork7 from "../../../public/images/hero-section-work7.png";
 import heroSectionWork8 from "../../../public/images/hero-section-work8.png";
+import { BsArrowUpRight } from "react-icons/bs";
 export default function HeroSection() {
   return (
     <>
@@ -52,8 +53,15 @@ export default function HeroSection() {
               leads and creatives who help unlock rapid growth and empower
               global industry leaders in hospitality tech.
             </p>
-            <button>Contact Us</button>
-            <Link href="">See Recent Work</Link>
+            <div className="hero-section-btns">
+              <Link href="/contact-us" className="blog-btn">
+                Contact Us
+                <span>
+                  <BsArrowUpRight />
+                </span>
+              </Link>
+              <Link href="">See Recent Work</Link>
+            </div>
           </div>
           <div className="hero-section-image">
             <Image

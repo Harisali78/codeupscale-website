@@ -5,6 +5,7 @@ import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { FiSend } from "react-icons/fi";
+import logo from "../../../public/images/logo.png";
 export default function FooterComponent() {
   return (
     <>
@@ -25,12 +26,7 @@ export default function FooterComponent() {
               <div className="col-xxl-12">
                 <div className="footer-inner">
                   <div className="footer-widget">
-                    <Image
-                      src={`/images/logo.png`}
-                      alt="LOGO"
-                      height={46}
-                      width={132}
-                    />
+                    <Image src={logo} alt="LOGO" />
                     <p>
                       When do they work well, and when do they on us and
                       finally, when do we actually need how can we avoid them.

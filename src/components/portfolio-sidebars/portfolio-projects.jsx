@@ -3,7 +3,7 @@ export default function PortfolioProjects() {
     <>
       <a href="#ui-ux">
         <div className="portfolio-tab-cards-tabBox">
-          <h4>UX / UI</h4>
+          <h4 style={{ color: "aqua" }}>UX / UI</h4>
           <p>
             Usability audits <br /> UX research
           </p>
@@ -11,7 +11,7 @@ export default function PortfolioProjects() {
       </a>
       <a href="#wordpress-laravel">
         <div className="portfolio-tab-cards-tabBox">
-          <h4>WWW</h4>
+          <h4 style={{ color: "yellow" }}>WWW</h4>
           <p>
             Wordpress, Drupal <br /> Laravel
           </p>
@@ -19,7 +19,7 @@ export default function PortfolioProjects() {
       </a>
       <a href="#mobile-app">
         <div className="portfolio-tab-cards-tabBox">
-          <h4>Mobile apps</h4>
+          <h4 style={{ color: "green" }}>Mobile apps</h4>
           <p>
             IOS, Andriod <br /> Ionic, Flutter
           </p>
