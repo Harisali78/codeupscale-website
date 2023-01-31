@@ -6,7 +6,7 @@ import Services from "../src/components/services/services";
 import Testimonials from "../src/components/testimonials/testimonials";
 // import WorkedWithBrands from "../src/components/worked-with/worked-with-brands";
 import PortfolioComponent from "../src/components/portfolio/portfolio";
-import WhyChooseUs from "../src/components/why-choose-us/why-choose-us";
+// import WhyChooseUs from "../src/components/why-choose-us/why-choose-us";
 import Blog from "../src/components/blog/blog";
 
 export default function Home() {
