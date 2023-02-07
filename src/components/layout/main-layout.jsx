@@ -1,4 +1,4 @@
-import Contact from "../contact-us/contact";
+// import Contact from "../contact-us/contact";
 import FooterComponent from "../footer/footer";
 import Header from "../header/header";
 

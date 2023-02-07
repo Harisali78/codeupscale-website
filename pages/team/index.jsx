@@ -42,15 +42,6 @@ export default function TeamPage() {
               </div>
             </div>
           </div>
-          {/* <div className="row hero-video-row">
-            <div className="col-xxl-12">
-              <div className="hero-about-section-video">
-                <video loop muted autoPlay playsInline>
-                  <source src={aboutVideo} type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
       <section className="team-area-section">

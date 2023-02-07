@@ -9,7 +9,17 @@ import PortfolioComponent from "../src/components/portfolio/portfolio";
 // import WhyChooseUs from "../src/components/why-choose-us/why-choose-us";
 import Blog from "../src/components/blog/blog";
 
-export default function Home() {
+export default function Home({
+  heroSection,
+  partnerSection,
+  ourGoalSection,
+  ourServicesSection,
+  ourTestimonialsSection,
+  ourBlogsHeaderSection,
+  ourBlogsCardSection,
+  ourPortfolioSection,
+  ourPortfolioProjectsSection,
+}) {
   return (
     <>
       <Head>
@@ -19,17 +29,78 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <HeroSection />
+        <HeroSection
+          heroSection={heroSection}
+          partnerSection={partnerSection}
+        />
         {/* <InfiniteScrollMenu /> */}
-        <About />
-        <Services />
+        <About ourGoalSection={ourGoalSection.data.attributes} />
+        <Services ourServicesSection={ourServicesSection} />
         {/* <OurWork /> */}
-        <PortfolioComponent />
+        <PortfolioComponent
+          ourPortfolioSection={ourPortfolioSection.data.attributes}
+          ourPortfolioProjectsSection={ourPortfolioProjectsSection}
+        />
         {/* <WhyChooseUs /> */}
         {/* <WorkedWithBrands /> */}
-        <Testimonials />
-        <Blog />
+        <Testimonials ourTestimonialsSection={ourTestimonialsSection} />
+        <Blog
+          ourBlogsHeaderSection={ourBlogsHeaderSection}
+          ourBlogsCardSection={ourBlogsCardSection}
+        />
       </div>
     </>
   );
+}
+export async function getServerSideProps() {
+  let hero = await fetch("http://localhost:1337/api/hero-section?populate=*");
+  let heroSection = await hero.json();
+
+  let partner = await fetch(
+    "http://localhost:1337/api/partner-sections?populate=*"
+  );
+  let partnerSection = await partner.json();
+
+  let ourGoal = await fetch("http://localhost:1337/api/our-goal?populate=*");
+  let ourGoalSection = await ourGoal.json();
+
+  let ourServices = await fetch("http://localhost:1337/api/our-services");
+  let ourServicesSection = await ourServices.json();
+
+  let ourTestimonials = await fetch(
+    "http://localhost:1337/api/our-testomonials?populate=*"
+  );
+  let ourTestimonialsSection = await ourTestimonials.json();
+
+  let ourBlogsHeader = await fetch("http://localhost:1337/api/our-blog-header");
+  let ourBlogsHeaderSection = await ourBlogsHeader.json();
+
+  let ourBlogsCard = await fetch(
+    "http://localhost:1337/api/blog-cards?populate=*"
+  );
+  let ourBlogsCardSection = await ourBlogsCard.json();
+
+  let ourPortfolio = await fetch(
+    "http://localhost:1337/api/portfolio-section-header"
+  );
+  let ourPortfolioSection = await ourPortfolio.json();
+
+  let ourPortfolioProjects = await fetch(
+    "http://localhost:1337/api/portfolio-projects-cards?populate=*"
+  );
+  let ourPortfolioProjectsSection = await ourPortfolioProjects.json();
+
+  return {
+    props: {
+      heroSection,
+      partnerSection,
+      ourGoalSection,
+      ourServicesSection,
+      ourTestimonialsSection,
+      ourBlogsHeaderSection,
+      ourBlogsCardSection,
+      ourPortfolioSection,
+      ourPortfolioProjectsSection,
+    },
+  };
 }

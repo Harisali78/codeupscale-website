@@ -4,7 +4,10 @@ import PortfolioTechnologiesCards from "../portfolio-cards/portfolio-technologie
 import PortfolioProjects from "../portfolio-sidebars/portfolio-projects";
 import PortfolioTechnologies from "../portfolio-sidebars/portfolio-technologies";
 
-export default function PortfolioComponent() {
+export default function PortfolioComponent({
+  ourPortfolioSection,
+  ourPortfolioProjectsSection,
+}) {
   const [portfolio, setPortfolio] = useState("projects");
   return (
     <div className="portfolio-structure">
@@ -33,20 +36,18 @@ export default function PortfolioComponent() {
           </div>
           <div className="portfolio-description">
             <div className="portfolio-description-content">
-              <h2>Our Work</h2>
-              <h2>fueled by User Experience</h2>
-              <p>
-                Our work is spread across continents and leading industries, as
-                we enjoy solving problems from all sectors. Today we work with
-                major brands globally and are part of products and solutions
-                that users love.
-              </p>
+              <h2>{ourPortfolioSection.portfolio_section_heading}</h2>
+              <h2>{ourPortfolioSection.portfolio_section_heading2}</h2>
+              <p>{ourPortfolioSection.portfolio_section_info}</p>
             </div>
-            {/* <PortfolioProjectsCards /> */}
             {portfolio === "projects" ? (
-              <PortfolioProjectsCards />
+              <PortfolioProjectsCards
+                ourPortfolioProjectsSection={ourPortfolioProjectsSection}
+              />
             ) : (
-              <PortfolioTechnologiesCards />
+              <PortfolioTechnologiesCards
+                ourPortfolioProjectsSection={ourPortfolioProjectsSection}
+              />
             )}
           </div>
         </div>

@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroSectionImg from "../../../public/images/hero-section-img.jpeg";
-import heroSectionWork from "../../../public/images/hero-section-work.png";
-import heroSectionWork2 from "../../../public/images/hero-section-work2.png";
-import heroSectionWork3 from "../../../public/images/hero-section-work3.png";
-import heroSectionWork4 from "../../../public/images/hero-section-work4.png";
-import heroSectionWork5 from "../../../public/images/hero-section-work5.png";
-import heroSectionWork6 from "../../../public/images/hero-section-work6.png";
-import heroSectionWork7 from "../../../public/images/hero-section-work7.png";
-import heroSectionWork8 from "../../../public/images/hero-section-work8.png";
 import { BsArrowUpRight } from "react-icons/bs";
-export default function HeroSection() {
+export default function HeroSection({ heroSection, partnerSection }) {
   return (
     <>
       {/* <div className="container hero-section">
@@ -47,94 +38,50 @@ export default function HeroSection() {
       <div className="hero-section">
         <div className="hero-section-content-image">
           <div className="hero-section-content">
-            <h1>#1 Agency for Partnership Growth.</h1>
-            <p>
-              Born in London, we are a squad of partnership experts, growth
-              leads and creatives who help unlock rapid growth and empower
-              global industry leaders in hospitality tech.
-            </p>
+            <h1>{heroSection.data.attributes.hero_header}</h1>
+            <p>{heroSection.data.attributes.hero_paragraph}</p>
             <div className="hero-section-btns">
               <Link href="/contact-us" className="blog-btn">
-                Contact Us
+                {heroSection.data.attributes.hero_contact_btn}
                 <span>
                   <BsArrowUpRight />
                 </span>
               </Link>
-              <Link href="">See Recent Work</Link>
+              <Link href="">
+                {heroSection.data.attributes.hero_recent_work_btn}
+              </Link>
             </div>
           </div>
           <div className="hero-section-image">
             <Image
-              src={heroSectionImg}
-              alt="Hero Section"
+              src={`http://localhost:1337${heroSection.data.attributes.hero_banner.data.attributes.url}`}
               className="hero-section-img"
+              height={50}
+              width={150}
             />
           </div>
         </div>
         <div className="hero-section-main-slider">
           <div className="hero-section-my-slider">
             <div className="hero-section-my-slide-track">
-              <div className="hero-section-my-slide">
-                <Image
-                  src={heroSectionWork5}
-                  alt=""
-                  // height={470}
-                  // width={500}
-                  height={50}
-                  width={150}
-                />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork2} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork3} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork4} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork5} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork6} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork7} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork8} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork3} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork2} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork3} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork4} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork5} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork6} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork7} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork8} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork7} alt="" height={50} width={150} />
-              </div>
-              <div className="hero-section-my-slide">
-                <Image src={heroSectionWork2} alt="" height={50} width={150} />
-              </div>
+              {partnerSection.data.map((ourPartners) => {
+                return (
+                  <>
+                    {ourPartners.attributes.images.data.map((myData) => {
+                      return (
+                        <div className="hero-section-my-slide" key={myData.id}>
+                          <Image
+                            src={`http://localhost:1337${myData.attributes.url}`}
+                            alt=""
+                            height={50}
+                            width={150}
+                          />
+                        </div>
+                      );
+                    })}
+                  </>
+                );
+              })}
             </div>
           </div>
         </div>
