@@ -1,4 +1,4 @@
 function Name() {
-    return <h1>Hello World</h1>
+    return <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit eligendi sint, optio, quisquam culpa ea soluta iure voluptate in alias velit quam aliquid illum ullam reprehenderit repellendus non consequatur quis.</p>
 }
 export default Name
